@@ -1,0 +1,48 @@
+{
+  "name": "solid-dom-testing",
+  "version": "0.0.1",
+  "description": "dom assertion helpers for solid-testing-library",
+  "repository": {},
+  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "test": "uvu -r solid-register",
+    "prettier": "prettier -w ./*.ts",
+    "test:coverage": "c8 uvu -r solid-register",
+    "test:watch": "chokidar index.ts index.test.ts -c \"uvu -r solid-register\"",
+    "test:watch:coverage": "chokidar index.ts index.test.ts -c \"c8 uvu -r solid-register\"",
+    "test:types": "tsc --noEmit",
+    "test:watch:types": "chokidar index.ts index.test.ts -c \"tsc --noEmit\""
+  },
+  "keywords": [
+    "solidjs",
+    "testing",
+    "dom"
+  ],
+  "author": "Alex Lohr",
+  "license": "MIT",
+  "dependencies": {
+    "dom-accessibility-api": "^0.5.10"
+  },
+  "devDependencies": {
+    "c8": "^7.10.0",
+    "chokidar-cli": "^3.0.0",
+    "jsdom": "^18.1.0",
+    "prettier": "^2.4.1",
+    "solid-register": "^0.0.14",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
+    "uvu": "^0.5.2"
+  },
+  "c8": {
+    "reporter": ["text", "html"]
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}
