@@ -1,9 +1,10 @@
 {
   "name": "solid-dom-testing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "dom assertion helpers for solid-testing-library",
   "repository": {},
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
